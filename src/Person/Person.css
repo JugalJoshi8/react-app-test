@@ -1,0 +1,8 @@
+.person {
+    display: block;
+    height: 200x;
+    background: lightblue;
+    border: solid 1px darkblue;
+    box-shadow: 0 10px 40px black;
+    margin: 20px;
+}
