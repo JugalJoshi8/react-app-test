@@ -8,3 +8,9 @@
     padding: 10px;
     width: 50vw;
 }
+
+@media (min-width: 600px) {
+    .person {
+        width: 500px;
+    }
+}

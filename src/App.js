@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import styles from './App.module.css';
 import Person from './Person/Person';
 
 class App extends Component {
@@ -40,12 +40,20 @@ class App extends Component {
       })
     }
 
+    let buttonClass = [];
+    if(this.state.persons.length < 3) {
+      buttonClass.push(styles.red);
+    }
+    if(this.state.persons.length < 2) {
+      buttonClass.push(styles.bold);
+    }
+
     return (
-      <div className="App">
+      <div className={styles.App}>
         <header className="App-header">
           Persons
         </header>
-        <button onClick={() => { this.setState({ showPersons: !this.state.showPersons }) }}>Show / Hide Persons</button>
+        <button className = {buttonClass.join(' ')} onClick={() => { this.setState({ showPersons: !this.state.showPersons }) }}>Show / Hide Persons</button>
         <ul>
           {persons}
         </ul>

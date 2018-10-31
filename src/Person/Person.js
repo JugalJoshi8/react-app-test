@@ -1,9 +1,9 @@
 import React from 'react';
-import './Person.css';
+import styles from './Person.module.css';
 
  const person = (props) => {
     return (
-        <div className = 'person'>
+        <div className = {styles.person}>
             <p>Name : {props.name}</p>
             <p>Age: {props.age}</p>
             <div>
