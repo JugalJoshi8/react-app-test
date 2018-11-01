@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Header.module.css'
+import AUX from '../HOC/Auxilary';
 
 const Header = (props) => {
     let buttonClass = [];
@@ -10,12 +11,12 @@ const Header = (props) => {
         buttonClass.push(styles.bold);
     }
     return (
-        <div>
+        <AUX>
             <header className="App-header">
                 Persons
              </header>
             <button className={buttonClass.join(' ')} onClick={props.togglePersons}>Show / Hide Persons</button>
-        </div>
+        </AUX>
     )
 }
 
